@@ -7,19 +7,28 @@ export function Gallery() {
       year: "2024",
       role: "Personal Project",
       description: "Modern portfolio built with HTML, CSS, and JS",
+      image: "/portfolio-website-design-modern-interface.jpg",
     },
     {
       title: "To-Do App",
       year: "2024",
       role: "React Project",
       description: "Productivity tool using React and Firebase",
+      image: "/todo-app-task-management-interface.jpg",
     },
-    { title: "Weather App", year: "2024", role: "API Integration", description: "Live weather data using Weather API" },
+    {
+      title: "Weather App",
+      year: "2024",
+      role: "API Integration",
+      description: "Live weather data using Weather API",
+      image: "/weather-app-forecast-temperature.jpg",
+    },
     {
       title: "E-Commerce Prototype",
       year: "2025",
       role: "UI/UX Design",
       description: "Full-stack e-commerce application",
+      image: "/ecommerce-shopping-store-interface.jpg",
     },
   ]
 
@@ -32,14 +41,11 @@ export function Gallery() {
           {projects.map((project, index) => (
             <div key={index} className="group cursor-pointer">
               <div className="bg-gray-800 aspect-video rounded-lg overflow-hidden mb-4 hover:ring-2 ring-cyan-500/30 transition">
-                <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                  <div className="text-center">
-                    <svg className="w-12 h-12 text-gray-600 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
-                    </svg>
-                    <p className="text-xs text-gray-600">{project.year}</p>
-                  </div>
-                </div>
+                <img
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                />
               </div>
               <h3 className="text-lg font-bold group-hover:text-cyan-400 transition">{project.title}</h3>
               <p className="text-sm text-gray-500 mb-2">{project.role}</p>

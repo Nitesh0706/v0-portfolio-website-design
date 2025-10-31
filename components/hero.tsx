@@ -19,7 +19,7 @@ export function Hero() {
         <div className="grid md:grid-cols-2 gap-16 items-center min-h-[80vh]">
           {/* Left - Bold Typography */}
           <div className="space-y-12">
-            <h1 className="text-7xl md:text-8xl font-black leading-none tracking-tighter text-balance">
+            <h1 className="text-5xl md:text-6xl font-black leading-none tracking-tighter text-balance">
               ASPIRING
               <br />
               DEVELOPER
@@ -45,11 +45,11 @@ export function Hero() {
           {/* Right - Description & CTA */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-base text-gray-300 leading-relaxed">
                 I'm a passionate software developer and B.Tech Computer Science student at VIT Chennai. I enjoy learning
                 new technologies, building innovative projects, and solving real-world problems through code.
               </p>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <p className="text-xs text-gray-400 leading-relaxed">
                 At the intersection of creativity and technology, I design more than just code—I create solutions. Every
                 project is a reflection of clean logic and bold ideas.
               </p>

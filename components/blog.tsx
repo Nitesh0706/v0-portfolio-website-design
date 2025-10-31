@@ -7,18 +7,21 @@ export function Blog() {
       title: "GETTING STARTED WITH REACT",
       description: "A beginner-friendly guide to understanding React hooks and components for building dynamic UIs.",
       year: "2024",
+      image: "/react-hooks-guide.jpg",
     },
     {
       number: "02",
       title: "WEB DEVELOPMENT BEST PRACTICES",
       description: "Exploring clean code principles, performance optimization, and responsive design techniques.",
       year: "2024",
+      image: "/web-dev-best-practices.jpg",
     },
     {
       number: "03",
       title: "MY JOURNEY INTO TECH",
       description: "Sharing my experiences as a first-year CS student and lessons learned while building projects.",
       year: "2025",
+      image: "/tech-journey-student.jpg",
     },
   ]
 
@@ -39,10 +42,12 @@ export function Blog() {
                   <h3 className="text-2xl font-black group-hover:text-cyan-400 transition">{article.title}</h3>
                   <p className="text-gray-400 max-w-md">{article.description}</p>
                 </div>
-                <div className="w-full md:w-48 h-32 bg-gray-800 rounded-lg flex-shrink-0 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2z" />
-                  </svg>
+                <div className="w-full md:w-48 h-32 bg-gray-800 rounded-lg flex-shrink-0 overflow-hidden">
+                  <img
+                    src={article.image || "/placeholder.svg"}
+                    alt={article.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
               </div>
             </div>

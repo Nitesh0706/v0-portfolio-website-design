@@ -9,7 +9,7 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        <Link href="/" className="text-white font-bold text-lg tracking-wider hover:opacity-80 transition">
+        <Link href="/" className="text-white font-bold text-2xl tracking-wider hover:opacity-80 transition">
           Nitesh
         </Link>
 

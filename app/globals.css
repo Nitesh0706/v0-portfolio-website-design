@@ -144,3 +144,33 @@ html {
   background: linear-gradient(135deg, var(--neon-orange), transparent);
   opacity: 0.3;
 }
+
+/* Added glow effects for main text */
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 20px rgba(34, 211, 238, 0.4), 0 0 40px rgba(34, 211, 238, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(34, 211, 238, 0.6), 0 0 50px rgba(34, 211, 238, 0.3);
+  }
+}
+
+.glow-text {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Added hover glow effect for project titles */
+@keyframes glow-hover {
+  0%,
+  100% {
+    text-shadow: 0 0 15px rgba(34, 211, 238, 0.6), 0 0 30px rgba(34, 211, 238, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(34, 211, 238, 0.8), 0 0 40px rgba(34, 211, 238, 0.5);
+  }
+}
+
+.project-title-glow:hover {
+  animation: glow-hover 1.5s ease-in-out infinite;
+}

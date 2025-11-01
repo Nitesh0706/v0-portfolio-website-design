@@ -2,24 +2,20 @@
 
 export function Hero() {
   return (
-    <section className="min-h-screen bg-black text-white pt-28 pb-16 overflow-hidden relative">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 opacity-40">
-        <div
-          className="absolute top-0 left-0 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl"
-          style={{ opacity: 0.05 }}
-        />
-        <div
-          className="absolute top-1/2 right-0 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl"
-          style={{ opacity: 0.05 }}
-        />
-      </div>
+    <section
+      className="min-h-screen text-white pt-28 pb-16 overflow-hidden relative bg-cover bg-center"
+      style={{
+        backgroundImage: "url(/hero-background.png)",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50 pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center min-h-[80vh]">
           {/* Left - Bold Typography */}
           <div className="space-y-12">
-            <h1 className="text-5xl md:text-6xl font-black leading-none tracking-tighter text-balance">
+            <h1 className="glow-text text-5xl md:text-6xl font-black leading-none tracking-tighter text-balance">
               ASPIRING
               <br />
               DEVELOPER

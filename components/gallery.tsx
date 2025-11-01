@@ -35,7 +35,7 @@ export function Gallery() {
   return (
     <section id="portfolio" className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl font-black mb-16 tracking-tight">FEATURED PROJECTS</h2>
+        <h2 className="text-5xl md:text-6xl font-black mb-16 tracking-tight glow-text">FEATURED PROJECTS</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           {projects.map((project, index) => (
@@ -47,7 +47,9 @@ export function Gallery() {
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                 />
               </div>
-              <h3 className="text-lg font-bold group-hover:text-cyan-400 transition">{project.title}</h3>
+              <h3 className="text-lg font-bold group-hover:text-cyan-400 transition project-title-glow">
+                {project.title}
+              </h3>
               <p className="text-sm text-gray-500 mb-2">{project.role}</p>
               <p className="text-sm text-gray-400">{project.description}</p>
             </div>
@@ -56,7 +58,7 @@ export function Gallery() {
 
         {/* Testimonials - Updated for student context */}
         <div className="border-t border-white/10 pt-24 space-y-12">
-          <h3 className="text-4xl font-black tracking-tight">SKILLS & EXPERTISE</h3>
+          <h3 className="text-4xl font-black tracking-tight glow-text">SKILLS & EXPERTISE</h3>
 
           <div className="bg-white/5 rounded-lg p-12 space-y-8">
             <div className="text-5xl text-white/30">"</div>

@@ -31,7 +31,7 @@ export function Services() {
   return (
     <section id="services" className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl font-black mb-20 tracking-tight">WHAT I DO</h2>
+        <h2 className="text-5xl md:text-6xl font-black mb-20 tracking-tight glow-text">WHAT I DO</h2>
 
         <div className="space-y-12">
           {services.map((service, index) => (

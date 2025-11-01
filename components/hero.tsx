@@ -1,6 +1,13 @@
 "use client"
 
 export function Hero() {
+  const scrollDown = () => {
+    const nextSection = document.querySelector(".services-section")
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section
       className="min-h-screen text-white pt-28 pb-16 overflow-hidden relative bg-cover bg-center"
@@ -65,6 +72,17 @@ export function Hero() {
 
         {/* Decorative date */}
         <div className="absolute bottom-8 right-6 text-gray-600 text-xs font-bold tracking-wider">15|01|2025</div>
+
+        <button
+          onClick={scrollDown}
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white hover:text-gray-300 transition z-20 flex flex-col items-center gap-2"
+          aria-label="Scroll to next section"
+        >
+          <svg className="w-6 h-6 bounce-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+          <span className="text-xs font-bold tracking-wider uppercase">Down</span>
+        </button>
       </div>
     </section>
   )

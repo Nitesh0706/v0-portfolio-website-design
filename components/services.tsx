@@ -29,8 +29,18 @@ export function Services() {
   ]
 
   return (
-    <section id="services" className="services-section py-24 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section
+      id="services"
+      className="services-section py-24 text-white relative"
+      style={{
+        backgroundImage: "url(/hero-background.png)",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/70" />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <h2 className="text-5xl md:text-6xl font-black mb-20 tracking-tight glow-text">WHAT I DO</h2>
 
         <div className="space-y-12">

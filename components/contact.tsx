@@ -23,9 +23,19 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-black text-white border-t border-white/10">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl font-black mb-4 tracking-tight">LET'S TALK</h2>
+    <section
+      id="contact"
+      className="py-24 text-white border-t border-white/10 relative"
+      style={{
+        backgroundImage: "url(/hero-background.png)",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/70" />
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
+        <h2 className="text-5xl md:text-6xl font-black mb-4 tracking-tight glow-text">LET'S TALK</h2>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Contact Form */}

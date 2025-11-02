@@ -26,8 +26,17 @@ export function Blog() {
   ]
 
   return (
-    <section className="py-24 bg-black text-white border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6">
+    <section
+      className="py-24 text-white border-t border-white/10 relative"
+      style={{
+        backgroundImage: "url(/hero-background.png)", // changed background to hero-background.png for consistency
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/70" />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <h2 className="text-4xl font-black mb-16 tracking-tight glow-text">LEARNING & ARTICLES</h2>
 
         <div className="space-y-8">
